@@ -8,7 +8,12 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "swiper": "^8.1.0",
     "vue": "^3.2.13",
+    "vue-eslint-parser": "^8.0.0",
+    "vue-ls": "^4.2.0",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {

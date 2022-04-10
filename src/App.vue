@@ -1,6 +1,6 @@
 <template>
+  <the-header></the-header>
   <div>
-    <the-header></the-header>
     <router-view></router-view>
   </div>
 </template>
@@ -59,6 +59,13 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --text-color: #1f1f1f;
+  --white: #fff;
+  --transition: 0.3s ease;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -80,10 +87,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-section {
-	padding-top: 9.375rem;
 }
 
 .container {
@@ -122,6 +125,12 @@ section {
 @media (max-width: 576px) {
   .container {
     max-width: 540px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 0 2rem;
   }
 }
 </style>
