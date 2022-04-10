@@ -6,7 +6,7 @@
           <div class="container">
             <div class="home__content">
               <h2 class="home__subtitle">
-                Биочистка верхней одежды в Ташкенте
+                Биочистка верхней одежды
               </h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
@@ -22,7 +22,7 @@
           <div class="container">
             <div class="home__content">
               <h2 class="home__subtitle">
-                Биочистка верхней одежды в Ташкенте
+                Биочистка верхней одежды
               </h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
@@ -38,7 +38,7 @@
           <div class="container">
             <div class="home__content">
               <h2 class="home__subtitle">
-                Биочистка верхней одежды в Ташкенте
+                Биочистка верхней одежды
               </h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
@@ -111,7 +111,7 @@ export default {
     max-width: 770px;
     margin: 0 auto;
     text-transform: uppercase;
-    font-size: clamp(1.5rem, -1.5rem + 8vw, 3rem);
+    font-size: clamp(1.7rem, -1.5rem + 8vw, 3rem);
     font-weight: 700;
     line-height: calc(70 / 48 * 100%);
     color: #fff;
@@ -119,12 +119,13 @@ export default {
   }
 
   &__subtitle {
-    font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+    font-size: clamp(.5rem, 0.6563rem + 1.5vw, 1.5rem);
     font-weight: 600;
     line-height: calc(33 / 24 * 100%);
     color: #fff;
     margin-top: 0;
     margin-bottom: 10px;
+		text-transform: uppercase;
   }
 
   &__link {
