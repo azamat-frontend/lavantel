@@ -89,6 +89,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+	width: 100%;
+  display: block;
+  height: auto;
+  border: none;
+}
+
 .container {
   max-width: 100%;
   position: relative;

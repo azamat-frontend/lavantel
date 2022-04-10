@@ -86,7 +86,7 @@ export default {
 .header {
   position: fixed;
   top: 0;
-	left: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   transition: var(--transition);
@@ -99,13 +99,6 @@ export default {
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
-  &.active .logo {
-    width: 100px;
-  }
-  &.active .logo img {
-    width: 100%;
-  }
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -114,6 +107,11 @@ export default {
 
   &__logo {
     display: inline-flex;
+    img {
+      @media (max-width: 576px) {
+        width: 90px;
+      }
+    }
   }
 
   &__nav {

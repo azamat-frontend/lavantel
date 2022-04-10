@@ -3,11 +3,14 @@
     <swiper :navigation="true" :modules="modules" :loop="true" class="mySwiper">
       <swiper-slide>
         <section class="home slide-1">
+					<picture>
+						<source srcset="@/assets/home-1-large.jpg" media="(min-width: 1000px)" />
+						<source srcset="@/assets/home-1-medium.jpg" media="(min-width: 600px)" />
+						<img src="@/assets/home-1.jpg" alt="" />
+					</picture>
           <div class="container">
             <div class="home__content">
-              <h2 class="home__subtitle">
-                Биочистка верхней одежды
-              </h2>
+              <h2 class="home__subtitle">Биочистка верхней одежды</h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
                 >Оставить Заявку</router-link
@@ -19,11 +22,14 @@
 
       <swiper-slide>
         <section class="home slide-2">
+					<picture>
+						<source srcset="@/assets/home-2-large.jpg" media="(min-width: 1000px)" />
+						<source srcset="@/assets/home-2-medium.jpg" media="(min-width: 600px)" />
+						<img src="@/assets/home-2.jpg" alt="" />
+					</picture>
           <div class="container">
             <div class="home__content">
-              <h2 class="home__subtitle">
-                Биочистка верхней одежды
-              </h2>
+              <h2 class="home__subtitle">Биочистка верхней одежды</h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
                 >Оставить Заявку</router-link
@@ -35,11 +41,14 @@
 
       <swiper-slide>
         <section class="home slide-3">
+					<picture>
+						<source srcset="@/assets/home-3-large.jpg" media="(min-width: 1200px)" />
+						<source srcset="@/assets/home-3-medium.jpg" media="(min-width: 768px)" />
+						<img src="@/assets/home-3.jpg" alt="" />
+					</picture>
           <div class="container">
             <div class="home__content">
-              <h2 class="home__subtitle">
-                Биочистка верхней одежды
-              </h2>
+              <h2 class="home__subtitle">Биочистка верхней одежды</h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
               <router-link class="home__link" :to="{ name: 'Contacts' }"
                 >Оставить Заявку</router-link
@@ -75,43 +84,50 @@ export default {
 <style scoped lang="scss">
 .home {
   position: relative;
-	padding-top: 50px;
+	z-index: 1;
   height: 768px;
   display: grid;
   align-content: center;
-  background-position: center 98px;
-  background-size: cover;
-  background-repeat: no-repeat;
 
-	&::before {
-		content: '';
+  &::before {
+    content: '';
+    position: absolute;
+		z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+
+	img {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+		top: 98px;
+		height: 768px;
+		object-fit: cover;
+		@media (max-width: 576px) {
+			top: 79.14px;
+			height: 565px;
+		}
 	}
-
-  &.slide-1 {
-    background-image: url('@/assets/home-1.jpg');
-  }
-	&.slide-2 {
-    background-image: url('@/assets/home-2.webp');
-  }
-	&.slide-3 {
-    background-image: url('@/assets/home-3.jpg');
-  }
 
   &__content {
     text-align: center;
+		margin-top: 150px;
+		@media (max-width: 768px) {
+			margin-top: 0;
+		}
   }
 
   &__title {
     max-width: 770px;
     margin: 0 auto;
     text-transform: uppercase;
-    font-size: clamp(1.7rem, -1.5rem + 8vw, 3rem);
+    font-size: clamp(2rem, -1.5rem + 8vw, 3rem);
     font-weight: 700;
     line-height: calc(70 / 48 * 100%);
     color: #fff;
@@ -119,13 +135,13 @@ export default {
   }
 
   &__subtitle {
-    font-size: clamp(.5rem, 0.6563rem + 1.5vw, 1.5rem);
+    font-size: clamp(0.5rem, 0.6563rem + 1.5vw, 1.5rem);
     font-weight: 600;
     line-height: calc(33 / 24 * 100%);
     color: #fff;
     margin-top: 0;
     margin-bottom: 10px;
-		text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   &__link {
