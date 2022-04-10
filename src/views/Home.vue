@@ -75,6 +75,7 @@ export default {
 <style scoped lang="scss">
 .home {
   position: relative;
+	padding-top: 50px;
   height: 768px;
   display: grid;
   align-content: center;
@@ -93,10 +94,10 @@ export default {
 	}
 
   &.slide-1 {
-    background-image: url('@/assets/home-1.webp');
+    background-image: url('@/assets/home-1.jpg');
   }
 	&.slide-2 {
-    background-image: url('@/assets/home-2.jpg');
+    background-image: url('@/assets/home-2.webp');
   }
 	&.slide-3 {
     background-image: url('@/assets/home-3.jpg');
