@@ -80,27 +80,27 @@
   <div class="infos">
     <div class="container">
       <div class="infos__block">
-        <div class="infos__card">
+        <a class="infos__card" href="https://goo.gl/maps/32p6Y2jQh1q2CgRG9">
           <i class="ri-map-pin-fill"></i>
           <div class="infos__txt">
             <h3 class="infos__title">Мы находимся:</h3>
-            <a class="infos__subtitle" href="https://goo.gl/maps/32p6Y2jQh1q2CgRG9">Toshkent, Labihovuz ko’chasi</a>
+            <p class="infos__subtitle">Toshkent, Labihovuz ko’chasi</p>
           </div>
-        </div>
-        <div class="infos__card">
+        </a>
+        <a class="infos__card" href="mailto:lavantel.tashkent@gmail.com">
           <i class="ri-mail-fill"></i>
           <div class="infos__txt">
             <h3 class="infos__title">Напишите нам:</h3>
-            <a class="infos__subtitle" href="mailto:lavantel.tashkent@gmail.com">lavantel.tashkent@gmail.com</a>
+            <p class="infos__subtitle">lavantel.tashkent@gmail.com</p>
           </div>
-        </div>
-        <div class="infos__card">
+        </a>
+        <a class="infos__card" href="tel:998997780500">
           <i class="ri-phone-fill"></i>
           <div class="infos__txt">
             <h3 class="infos__title">Свяжитесь с нами:</h3>
-            <a class="infos__subtitle" href="tel:998997780500">+998 (99) 778-05-00</a>
+            <p class="infos__subtitle">+998 (99) 778-05-00</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
