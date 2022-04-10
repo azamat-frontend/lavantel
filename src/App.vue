@@ -97,6 +97,10 @@ img {
   border: none;
 }
 
+#app {
+	padding-bottom: 100px;
+}
+
 .container {
   max-width: 100%;
   position: relative;
