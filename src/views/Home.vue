@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper :navigation="true" :modules="modules" class="mySwiper">
+    <swiper :navigation="true" :modules="modules" :loop="true" class="mySwiper">
       <swiper-slide>
         <section class="home slide-1">
           <div class="container">
