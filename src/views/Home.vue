@@ -206,7 +206,7 @@ export default {
 } /* home end */
 
 .infos {
-  margin-top: -80px;
+  margin-top: -60px;
   @media (max-width: 992px) {
     margin-top: 30px;
   }
