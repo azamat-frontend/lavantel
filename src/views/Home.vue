@@ -6,13 +6,13 @@
           <picture>
             <source
               srcset="@/assets/home-1-large.jpg"
-              media="(min-width: 1000px)"
+              media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-1-medium.jpg"
-              media="(min-width: 600px)"
+              srcset="@/assets/home-1-large.jpg"
+              media="(min-width: 768px)"
             />
-            <img src="@/assets/home-1.jpg" alt="" />
+            <img src="@/assets/home-1-small.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -30,14 +30,14 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-2-large.jpg"
-              media="(min-width: 1000px)"
+              srcset="@/assets/home-1-large.jpg"
+              media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-2-medium.jpg"
-              media="(min-width: 600px)"
+              srcset="@/assets/home-1-large.jpg"
+              media="(min-width: 768px)"
             />
-            <img src="@/assets/home-2.jpg" alt="" />
+            <img src="@/assets/home-1-small.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -56,13 +56,13 @@
           <picture>
             <source
               srcset="@/assets/home-3-large.jpg"
-              media="(min-width: 1200px)"
+              media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-3-medium.jpg"
+              srcset="@/assets/home-3-large.jpg"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-3.jpg" alt="" />
+            <img src="@/assets/home-3-large.jpg" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -130,11 +130,11 @@ export default {
 .home {
   position: relative;
   z-index: 1;
-  height: 768px;
+  height: 865px;
   display: grid;
   align-content: center;
 	@media (max-width: 576px) {
-		height: 565px;
+		height: 720px;
 	}
 
   &::before {
@@ -159,7 +159,7 @@ export default {
     object-fit: cover;
     @media (max-width: 576px) {
       top: 79.14px;
-      height: 565px;
+      height: 640px;
     }
   }
 
@@ -167,7 +167,7 @@ export default {
     text-align: center;
     margin-top: 150px;
     @media (max-width: 768px) {
-      margin-top: 0;
+      margin-top: 10rem;
     }
   }
 
@@ -183,7 +183,7 @@ export default {
   }
 
   &__subtitle {
-    font-size: clamp(0.5rem, 0.6563rem + 1.5vw, 1.5rem);
+    font-size: clamp(12px, 0.6563rem + 1vw, 1.5rem);
     font-weight: 600;
     line-height: calc(33 / 24 * 100%);
     color: #fff;

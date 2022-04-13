@@ -90,7 +90,7 @@ export default {
   z-index: 1000;
   width: 100%;
   transition: var(--transition);
-  background-color: var(--white);
+	background-color: var(--white);
   color: var(--text-color);
 
   &.active {
