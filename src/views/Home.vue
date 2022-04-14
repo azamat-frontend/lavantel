@@ -38,14 +38,14 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-2-large.jpeg"
+              srcset="@/assets/home-2-desktop.jpg"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-2-large.jpeg"
+              srcset="@/assets/home-2-desktop.jpg"
               media="(min-width: 576px)"
             />
-            <img src="@/assets/home-2-small.jpg" alt="" />
+            <img src="@/assets/home-2-mobile.jpg" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -164,7 +164,7 @@ export default {
 	}
 
 	@media (max-width: 347px) {
-		top: 50%;
+		
 		left: 10px;
 		right: 10px;
 	}
@@ -232,7 +232,7 @@ export default {
     max-width: 770px;
     margin: 0 auto;
     text-transform: uppercase;
-    font-size: clamp(2rem, -1.5rem + 8vw, 3rem);
+    font-size: clamp(1.7rem, -1.5rem + 8vw, 3rem);
     font-weight: 700;
     line-height: calc(70 / 48 * 100%);
     color: #fff;
