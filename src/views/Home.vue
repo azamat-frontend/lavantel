@@ -152,16 +152,21 @@ export default {
 		left: 70px;
 		right: 70px;
 	}
-	@media (max-width: 992px) {
-		left: 50px;
-		right: 50px;
-		top: 65%;
+	@media (max-width: 1024px) {
+		top: 55%;
 	}
-	@media (max-width: 376px) {
-		top: 68%
+	@media (max-width: 768px) {
+		left: 20px;
+		right: 20px;
 	}
+	@media (max-width: 500px) {
+		top: 60%;
+	}
+
 	@media (max-width: 347px) {
-		top: 71%
+		top: 50%;
+		left: 10px;
+		right: 10px;
 	}
 }
 
@@ -217,9 +222,9 @@ export default {
 
   &__content {
     text-align: center;
-    margin-top: 150px;
+		margin-top: 80px;
     @media (max-width: 768px) {
-      margin-top: 10rem;
+      margin-top: 5rem;
     }
   }
 
