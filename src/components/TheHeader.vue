@@ -40,7 +40,15 @@
           </ul>
         </nav>
         <div class="header__hamburger" :class="{ active: mobileNav }">
-          <i class="ri-menu-line" @click="toggleMobileNav" v-show="mobile"></i>
+					<svg class="open" @click="toggleMobileNav" v-if="mobile" v-show="!mobileNav" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="-0.000244141" width="15" height="2" rx="1" fill="#566991"/>
+						<rect x="15" y="16" width="15" height="2" rx="1" fill="#566991"/>
+						<rect x="-0.000244141" y="8" width="30" height="2" rx="1" fill="#566991"/>
+					</svg>
+					<svg class="close" @click="toggleMobileNav" v-show="mobileNav" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707103 -0.707111 0.707103 0.707111 0 21.5625)" fill="#566991"/>
+						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.43701 0)" fill="#566991"/>
+					</svg>
         </div>
         <transition name="mobile-nav">
           <ul class="mobile-nav" v-show="mobileNav">
@@ -179,14 +187,21 @@ export default {
     right: 24px;
     z-index: 10;
 
-    i {
+    svg {
       cursor: pointer;
       font-size: 24px;
       transition: 0.8s ease;
+			
     }
+		svg.close {
+			
+		}
   }
-  &__hamburger.active i {
-    transform: rotate(180deg);
+	&__hamburger.active svg.open {
+    
+  }
+  &__hamburger.active svg.close {
+    
   }
 }
 
