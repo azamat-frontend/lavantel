@@ -26,7 +26,7 @@
             <div class="home__content">
               <h2 class="home__subtitle">Биочистка верхней одежды</h2>
               <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
-              <router-link class="home__link" :to="{ name: 'Contacts' }"
+              <router-link class="home__link" :to="{ name: 'contacts' }"
                 >Оставить Заявку</router-link
               >
             </div>
@@ -38,20 +38,20 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-2-desktop.webp"
+              srcset="@/assets/home-2-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-2-desktop.webp"
-              media="(min-width: 576px)"
+              srcset="@/assets/home-2-large.webp"
+              media="(min-width: 768px)"
             />
-            <img src="@/assets/home-2-mobile.webp" alt="" />
+            <img src="@/assets/home-2-small.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
               <h2 class="home__subtitle">Биочистка верхней одежды</h2>
-              <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
-              <router-link class="home__link" :to="{ name: 'Contacts' }"
+              <h1 class="home__title">Бесплатный вызов и доставка</h1>
+              <router-link class="home__link" :to="{ name: 'contacts' }"
                 >Оставить Заявку</router-link
               >
             </div>
@@ -75,8 +75,8 @@
           <div class="container">
             <div class="home__content">
               <h2 class="home__subtitle">Биочистка верхней одежды</h2>
-              <h1 class="home__title">Первая в Ташкенте Студия Биочистки</h1>
-              <router-link class="home__link" :to="{ name: 'Contacts' }"
+              <h1 class="home__title">С заботой о наших клиентах</h1>
+              <router-link class="home__link" :to="{ name: 'contacts' }"
                 >Оставить Заявку</router-link
               >
             </div>

@@ -14,45 +14,7 @@ export default {
     TheHeader
   },
   data() {
-    return {
-      links: [
-        {
-          id: 1,
-          name: 'Главная',
-          routerName: 'Home'
-        },
-        {
-          id: 2,
-          name: 'О нас',
-          routerName: 'About'
-        },
-        {
-          id: 3,
-          name: 'Услуги',
-          routerName: 'Services'
-        },
-        {
-          id: 4,
-          name: 'Наши работы',
-          routerName: 'Works'
-        },
-        {
-          id: 5,
-          name: 'Отзывы',
-          routerName: 'Reviews'
-        },
-        {
-          id: 6,
-          name: 'Контакты',
-          routerName: 'Contacts'
-        }
-      ]
-    }
-  },
-  provide() {
-    return {
-      links: this.links
-    }
+    return {}
   }
 }
 </script>
@@ -87,14 +49,14 @@ a {
 
 img {
   max-width: 100%;
-	width: 100%;
+  width: 100%;
   display: block;
   height: auto;
   border: none;
 }
 
 #app {
-	padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .container {
