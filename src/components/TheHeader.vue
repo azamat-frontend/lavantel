@@ -39,7 +39,14 @@
             </li>
           </ul>
         </nav>
-        <div class="header__hamburger" :class="{ active: mobileNav }">
+				<button class="more-button" :class="{ active: mobileNav }" v-show="mobile">
+					<div class="menu-icon-wrapper" @click="toggleMobileNav">
+						<div class="menu-icon-line half first"></div>
+						<div class="menu-icon-line"></div>
+						<div class="menu-icon-line half last"></div>
+					</div>
+				</button>
+        <!-- <div class="header__hamburger" :class="{ active: mobileNav }">
 					<svg class="open" @click="toggleMobileNav" v-if="mobile" v-show="!mobileNav" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect x="-0.000244141" width="15" height="2" rx="1" fill="#566991"/>
 						<rect x="15" y="16" width="15" height="2" rx="1" fill="#566991"/>
@@ -49,7 +56,7 @@
 						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707103 -0.707111 0.707103 0.707111 0 21.5625)" fill="#566991"/>
 						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.43701 0)" fill="#566991"/>
 					</svg>
-        </div>
+        </div> -->
         <transition name="mobile-nav">
           <ul class="mobile-nav" v-show="mobileNav">
             <li class="mobile-nav__item">
@@ -143,6 +150,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$menu-icon-transition: transform 300ms cubic-bezier(0.52, -0.80, 0.52, 0.52);
+$button-bg: #7d71b1;
 .header {
   position: fixed;
   top: 0;
@@ -176,32 +185,6 @@ export default {
 
   &__nav {
     margin: 0 auto;
-  }
-
-  &__hamburger {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    right: 24px;
-    z-index: 10;
-
-    svg {
-      cursor: pointer;
-      font-size: 24px;
-      transition: 0.8s ease;
-			
-    }
-		svg.close {
-			
-		}
-  }
-	&__hamburger.active svg.open {
-    
-  }
-  &__hamburger.active svg.close {
-    
   }
 }
 
@@ -262,6 +245,71 @@ export default {
   }
 }
 
+.more-button {
+	background-color: $button-bg;
+  box-shadow: 0px 0px 0px 4px #7d71b1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: .2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+	animation: onePulse .6s forwards linear;
+	&:hover, &:focus {
+    box-shadow: 0px 0px 0px 4px #7d71b1;
+  }
+  &:focus { outline: 0; }
+}
+.menu-icon-wrapper {
+	border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+.menu-icon-line {
+	background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  height: 2px;
+  &.first {
+		transition: $menu-icon-transition;
+    transform-origin: right;
+  }
+  &.last {
+		align-self: flex-end;
+    transition: $menu-icon-transition;
+    transform-origin: left;
+  }
+	&.half { width: 50%;}
+}
+.more-button.active {
+	animation: onePulse .6s forwards linear;
+}
+.more-button.active .menu-icon-wrapper {
+  transform: rotate(-45deg);
+}
+
+.more-button.active .menu-icon-line {
+  &.first {
+    transform: rotate(-90deg) translateX(1px);
+  }
+      
+  &.last {
+    transform: rotate(-90deg) translateX(-1px);
+  }
+}
+
 .mobile-nav-enter-active,
 .mobile-nav-leave-active {
   transition: all 0.5s ease;
@@ -274,5 +322,26 @@ export default {
 
 .mobile-nav-enter-to {
   transform: translateX(0);
+}
+
+@keyframes onePulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(92,103,255,0.3);
+  }
+  
+  50% {
+    box-shadow: 0px 0px 0px 12px rgba(92,103,255,0.1);
+  }
+  
+  100% {
+    box-shadow: 0px 0px 0px 4px rgba(92,103,255,0.3);
+  }
+}
+
+@keyframes fadeInItem {
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
 }
 </style>
