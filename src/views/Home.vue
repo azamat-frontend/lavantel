@@ -13,11 +13,11 @@
         <section class="home slide-1">
           <picture>
             <source
-              srcset="@/assets/home-1-large.jpg"
+              srcset="@/assets/home-1-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-1-large.jpg"
+              srcset="@/assets/home-1-large.webp"
               media="(min-width: 768px)"
             />
             <img src="@/assets/home-1-small.webp" alt="" />
@@ -38,14 +38,14 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-2-desktop.jpg"
+              srcset="@/assets/home-2-desktop.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-2-desktop.jpg"
+              srcset="@/assets/home-2-desktop.webp"
               media="(min-width: 576px)"
             />
-            <img src="@/assets/home-2-mobile.jpg" alt="" />
+            <img src="@/assets/home-2-mobile.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -63,14 +63,14 @@
         <section class="home slide-3">
           <picture>
             <source
-              srcset="@/assets/home-3-large.jpg"
+              srcset="@/assets/home-3-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-3-large.jpg"
+              srcset="@/assets/home-3-large.webp"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-3-large.jpg" alt="" />
+            <img src="@/assets/home-3-large.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
