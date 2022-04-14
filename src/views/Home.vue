@@ -236,7 +236,6 @@ export default {
     font-weight: 700;
     line-height: calc(70 / 48 * 100%);
     color: #fff;
-    margin-bottom: 40px;
   }
 
   &__subtitle {
@@ -259,6 +258,7 @@ export default {
     justify-content: center;
     max-width: 190px;
     width: 100%;
+		margin-top: 16px;
   }
 } /* home end */
 
