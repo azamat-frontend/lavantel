@@ -160,7 +160,7 @@ export default {
 		right: 20px;
 	}
 	@media (max-width: 500px) {
-		top: 60%;
+		top: 70%;
 	}
 
 	@media (max-width: 347px) {
@@ -224,7 +224,7 @@ export default {
     text-align: center;
 		margin-top: 80px;
     @media (max-width: 768px) {
-      margin-top: 5rem;
+      margin-top: 9rem;
     }
   }
 
