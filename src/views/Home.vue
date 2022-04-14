@@ -38,14 +38,14 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-1-large.jpg"
+              srcset="@/assets/home-2-large.jpeg"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-1-large.jpg"
+              srcset="@/assets/home-2-large.jpeg"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-1-small.webp" alt="" />
+            <img src="@/assets/home-2-small.jpeg" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
