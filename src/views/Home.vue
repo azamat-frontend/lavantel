@@ -43,9 +43,9 @@
             />
             <source
               srcset="@/assets/home-2-large.jpeg"
-              media="(min-width: 768px)"
+              media="(min-width: 576px)"
             />
-            <img src="@/assets/home-2-small.jpeg" alt="" />
+            <img src="@/assets/home-2-small.jpg" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
