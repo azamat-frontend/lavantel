@@ -1,6 +1,14 @@
 <template>
   <div>
-    <swiper :navigation="true" :modules="modules" :loop="true" class="mySwiper">
+    <swiper :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}" :modules="modules" :loop="true" :speed="800" class="mySwiper">
+			<div class="slider-navigation">
+				<div class="slider-arrow prevArrow">
+					<i class="ri-arrow-left-s-line"></i>
+				</div>
+				<div class="slider-arrow nextArrow">
+					<i class="ri-arrow-right-s-line"></i>
+				</div>
+			</div>
       <swiper-slide>
         <section class="home slide-1">
           <picture>
@@ -127,8 +135,51 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.slider-navigation {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 100px;
+	right: 100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 0;
+	
+	@media (max-width: 1170px) {
+		left: 70px;
+		right: 70px;
+	}
+	@media (max-width: 992px) {
+		left: 50px;
+		right: 50px;
+		top: 65%;
+	}
+	@media (max-width: 376px) {
+		top: 68%
+	}
+	@media (max-width: 347px) {
+		top: 71%
+	}
+}
+
+.slider-arrow {
+	height: 40px;
+	width: 40px;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #7D71B1;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}
 .home {
   position: relative;
+	width: 100%;
   z-index: 1;
   height: 865px;
   display: grid;
@@ -157,6 +208,7 @@ export default {
     top: 98px;
     height: 768px;
     object-fit: cover;
+		border: none;
     @media (max-width: 576px) {
       top: 79.14px;
       height: 640px;

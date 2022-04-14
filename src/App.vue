@@ -66,12 +66,8 @@ export default {
   --transition: 0.3s ease;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -102,7 +98,7 @@ img {
 }
 
 .container {
-  max-width: 100%;
+  width: 100%;
   position: relative;
   z-index: 1;
   padding: 0 1rem;
