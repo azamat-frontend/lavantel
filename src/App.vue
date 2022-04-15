@@ -22,6 +22,11 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+html {
+	-webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 :root {
   --text-color: #1f1f1f;
   --white: #fff;
@@ -53,6 +58,10 @@ img {
   display: block;
   height: auto;
   border: none;
+}
+
+section {
+	padding-top: 8rem;
 }
 
 #app {

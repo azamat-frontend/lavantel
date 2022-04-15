@@ -46,17 +46,6 @@
 						<div class="menu-icon-line half last"></div>
 					</div>
 				</button>
-        <!-- <div class="header__hamburger" :class="{ active: mobileNav }">
-					<svg class="open" @click="toggleMobileNav" v-if="mobile" v-show="!mobileNav" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect x="-0.000244141" width="15" height="2" rx="1" fill="#566991"/>
-						<rect x="15" y="16" width="15" height="2" rx="1" fill="#566991"/>
-						<rect x="-0.000244141" y="8" width="30" height="2" rx="1" fill="#566991"/>
-					</svg>
-					<svg class="close" @click="toggleMobileNav" v-show="mobileNav" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707103 -0.707111 0.707103 0.707111 0 21.5625)" fill="#566991"/>
-						<rect width="30.4939" height="2.03293" rx="1.01646" transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.43701 0)" fill="#566991"/>
-					</svg>
-        </div> -->
         <transition name="mobile-nav">
           <ul class="mobile-nav" v-show="mobileNav">
             <li class="mobile-nav__item">
@@ -236,7 +225,7 @@ $button-bg: #7d71b1;
     font-size: 18px;
 		font-weight: 600;
 		line-height: calc(25 / 18 * 100%);
-		padding: 1rem 0 1rem .75rem;
+		padding: 1.2rem 0 1rem .75rem;
   }
   &__link.active {
 		color: #1f1f1f;
@@ -246,8 +235,7 @@ $button-bg: #7d71b1;
 }
 
 .more-button {
-	background-color: $button-bg;
-  box-shadow: 0px 0px 0px 4px #7d71b1;
+	background-color: transparent;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -262,14 +250,12 @@ $button-bg: #7d71b1;
   position: relative;
   z-index: 2;
 	animation: onePulse .6s forwards linear;
-	&:hover, &:focus {
-    box-shadow: 0px 0px 0px 4px #7d71b1;
-  }
+
   &:focus { outline: 0; }
 }
 .menu-icon-wrapper {
 	border-radius: 2px;
-  width: 20px;
+  width: 30px;
   height: 20px;
   display: flex;
   flex-direction: column;
@@ -278,7 +264,7 @@ $button-bg: #7d71b1;
   transition: transform 330ms ease-out;
 }
 .menu-icon-line {
-	background-color: #fff;
+	background-color: $button-bg;
   border-radius: 2px;
   width: 100%;
   height: 2px;
@@ -302,11 +288,11 @@ $button-bg: #7d71b1;
 
 .more-button.active .menu-icon-line {
   &.first {
-    transform: rotate(-90deg) translateX(1px);
+    transform: rotate(-90deg) translateX(5px);
   }
       
   &.last {
-    transform: rotate(-90deg) translateX(-1px);
+    transform: rotate(-90deg) translateX(-6px);
   }
 }
 
@@ -322,26 +308,5 @@ $button-bg: #7d71b1;
 
 .mobile-nav-enter-to {
   transform: translateX(0);
-}
-
-@keyframes onePulse {
-  0% {
-    box-shadow: 0px 0px 0px 0px rgba(92,103,255,0.3);
-  }
-  
-  50% {
-    box-shadow: 0px 0px 0px 12px rgba(92,103,255,0.1);
-  }
-  
-  100% {
-    box-shadow: 0px 0px 0px 4px rgba(92,103,255,0.3);
-  }
-}
-
-@keyframes fadeInItem {
-  100% {
-    transform: translatex(0px);
-    opacity: 1;
-  }
 }
 </style>

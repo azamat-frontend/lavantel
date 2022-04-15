@@ -88,14 +88,14 @@
   <div class="infos">
     <div class="container">
       <div class="infos__block">
-        <a class="infos__card" href="https://goo.gl/maps/32p6Y2jQh1q2CgRG9">
+        <a class="infos__card" href="https://goo.gl/maps/32p6Y2jQh1q2CgRG9" target="_blank">
           <i class="ri-map-pin-fill"></i>
           <div class="infos__txt">
             <h3 class="infos__title">Мы находимся:</h3>
             <p class="infos__subtitle">Toshkent, Labihovuz ko’chasi</p>
           </div>
         </a>
-        <a class="infos__card" href="mailto:lavantel.tashkent@gmail.com">
+        <a class="infos__card" href="mailto:lavantel.tashkent@gmail.com" target="_blank">
           <i class="ri-mail-fill"></i>
           <div class="infos__txt">
             <h3 class="infos__title">Напишите нам:</h3>
