@@ -13,14 +13,14 @@
         <section class="home slide-1">
           <picture>
             <source
-              srcset="@/assets/home-1-large.webp"
+              srcset="@/assets/images/home-1-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-1-large.webp"
+              srcset="@/assets/images/home-1-large.webp"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-1-small.webp" alt="" />
+            <img src="@/assets/images/home-1-small.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -38,14 +38,14 @@
         <section class="home slide-2">
           <picture>
             <source
-              srcset="@/assets/home-2-large.webp"
+              srcset="@/assets/images/home-2-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-2-large.webp"
+              srcset="@/assets/images/home-2-large.webp"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-2-small.webp" alt="" />
+            <img src="@/assets/images/home-2-small.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -63,14 +63,14 @@
         <section class="home slide-3">
           <picture>
             <source
-              srcset="@/assets/home-3-large.webp"
+              srcset="@/assets/images/home-3-large.webp"
               media="(min-width: 900px)"
             />
             <source
-              srcset="@/assets/home-3-large.webp"
+              srcset="@/assets/images/home-3-large.webp"
               media="(min-width: 768px)"
             />
-            <img src="@/assets/home-3-large.webp" alt="" />
+            <img src="@/assets/images/home-3-large.webp" alt="" />
           </picture>
           <div class="container">
             <div class="home__content">
@@ -112,6 +112,9 @@
       </div>
     </div>
   </div>
+
+	<page-about></page-about>
+	<page-services></page-services>
 </template>
 
 <script>
@@ -120,11 +123,16 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { Navigation } from 'swiper'
 
+import PageAbout from '@/components/PageAbout'
+import PageServices from '@/components/PageServices'
+
 export default {
   name: 'Home',
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+		PageAbout,
+		PageServices
   },
   data() {
     return {

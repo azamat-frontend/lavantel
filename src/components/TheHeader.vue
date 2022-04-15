@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header__wrapper">
         <a class="header__logo logo" href="#">
-          <img class="logo__img" src="@/assets/logo.svg" alt="" />
+          <img class="logo__img" src="@/assets/images/logo.svg" alt="" />
         </a>
         <nav class="header__nav nav">
           <ul class="nav__list" v-show="!mobile">
