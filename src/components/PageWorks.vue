@@ -121,10 +121,10 @@ export default {
     align-items: center;
     justify-content: center;
     column-gap: 5px;
-    height: 355px;
+    // height: 355px;
   }
   .slide-image {
-    height: 355px;
+    // height: 355px;
     width: 275px;
   }
   .swiper-slide img {
