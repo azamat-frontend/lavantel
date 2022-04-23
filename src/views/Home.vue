@@ -115,6 +115,7 @@
 
 	<page-about></page-about>
 	<page-services></page-services>
+  <page-benefits></page-benefits>
 </template>
 
 <script>
@@ -125,6 +126,7 @@ import { Navigation } from 'swiper'
 
 import PageAbout from '@/components/PageAbout'
 import PageServices from '@/components/PageServices'
+import PageBenefits from '@/components/PageBenefits'
 
 export default {
   name: 'Home',
@@ -132,7 +134,8 @@ export default {
     Swiper,
     SwiperSlide,
 		PageAbout,
-		PageServices
+		PageServices,
+    PageBenefits
   },
   data() {
     return {

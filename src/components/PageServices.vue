@@ -119,9 +119,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .services {
-	padding-top: 100px;
+	padding-bottom: 100px;
 
 	&__tab {
 		display: flex;
