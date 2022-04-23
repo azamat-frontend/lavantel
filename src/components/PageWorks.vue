@@ -36,7 +36,7 @@
       </svg>
     </div>
     <swiper
-      :breakpoints="{ 640: { slidesPerView: 1 }, 992: { slidesPerView: 2 } }"
+      :breakpoints="{ 0: { slidesPerView: 1 }, 992: { slidesPerView: 2 } }"
       :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}"
       :slidesPerView="2"
       :spaceBetween="30"
