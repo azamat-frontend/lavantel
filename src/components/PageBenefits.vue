@@ -55,6 +55,7 @@ export default {
 <style lang="scss" scoped>
 .benefits {
   background-color: #F2F1F7;
+  padding-bottom: 100px;
 
   &__cards {
     display: grid;
