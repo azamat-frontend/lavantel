@@ -17,6 +17,99 @@
 				</defs>
 			</svg>
 		</div>
+
+		<div class="container">
+			<div class="services__tab">
+				<div class="services__tab-item">Надбавка За Сложную Декоративную Отделку 10%-50%</div>
+				<div class="services__tab-item">Надбавка За Пятновыводку 10%-50%</div>
+			</div>
+
+			<div class="services__cards">
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__card">
+					<div class="services__card-img">
+						<img src="@/assets/images/card-01.jpg" alt="">
+					</div>
+					<div class="services__card-content">
+						<h3 class="services__card-title">Биочистка Изделий Из Нубука и Замши</h3>
+						<p class="services__card-description">Устранение загрязнений и восстановление первоначальной яркости цвета позволит радоваться любимой вещью долгое время.</p>
+						<div class="services__card-price">
+							<p><span>200.000</span>/до 70 см</p>
+							<p><span>250.000</span>/до 70 см</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </template>
 
@@ -26,6 +119,62 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.services {
+	padding-top: 100px;
 
+	&__tab {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		row-gap: 20px;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__tab-item {
+		font-size: 14px;
+		padding: 17px 0;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+		width: 455px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__cards {
+		padding-top: 25px;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 25px;
+		@media (max-width: 1140px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__card {
+		max-width: 357px;
+		box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.2);
+		@media (max-width: 1140px) {
+			max-width: 450px;
+		}
+		@media (max-width: 1140px) {
+			max-width: 100%;
+		}
+	}
+
+	&__card-content {
+		padding: 15px 15px 35px 15px;
+	}
+
+	&__card-price {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
 </style>
