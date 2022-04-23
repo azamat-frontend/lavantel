@@ -36,7 +36,8 @@
       </svg>
     </div>
     <swiper
-      :navigation="true"
+      :breakpoints="{ 640: { slidesPerView: 1 }, 992: { slidesPerView: 2 } }"
+      :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}"
       :slidesPerView="2"
       :spaceBetween="30"
       :modules="modules"
@@ -74,7 +75,16 @@
           <img src="@/assets/images/works-04.jpg" alt="" />
         </div>
       </swiper-slide>
+      <div class="slider-navigation">
+        <div class="slider-arrow prevArrow">
+          <img src="@/assets/images/prev.svg" alt="">
+        </div>
+        <div class="slider-arrow nextArrow">
+          <img src="@/assets/images/next.svg" alt="">
+        </div>
+      </div>
     </swiper>
+    
   </div>
 </template>
 <script>
@@ -99,16 +109,48 @@ export default {
 <style lang="scss" scoped>
 .works {
   padding-top: 100px;
-}
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 5px;
-  height: 355px;
-}
-.slide-image {
-  height: 355px;
-  width: 275px;
+  padding-bottom: 100px;
+
+  .swiper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    height: 355px;
+  }
+  .slide-image {
+    height: 355px;
+    width: 275px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-navigation {
+    width: 100%;
+    display: flex;
+    column-gap: 25px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-arrow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  .prevArrow {
+    
+  }
+
+  .nextArrow {
+    
+  }
 }
 </style>
